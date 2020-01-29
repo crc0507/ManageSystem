@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript">
+        function userName() {
+            var name = $('#loginName').val();
+            var length = name.length;
+            if(length>16){
+                alert("用户名长度不能超过16个字符！");
+            }
+        }
+    </script>
+    <head>
+        <title>行政管理系统</title>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+        <link rel="stylesheet" href="css/unicorn.login.css" />
+    </head>
+    <body>
+    <div id="head">
+        <a href="#">常见问题</a>
+        <a href="#" >使用手册</a>
+        <a href="#" >关于我们</a>
+        <a href="#" >加入我们</a>
+        </div>
+        <div id="logo">
+            <img src="" alt="" />
+        </div>
+        <div id="loginbox">
+            <form id="loginform" class="form-vertical">
+				<p>欢迎使用行政管理系统</p>
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-user"></i></span><input id="loginName" type="text" placeholder="用户名" maxlength="15" oninput="userName()"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-lock"></i></span><input id="loginPass" type="password" placeholder="密码" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <span class="pull-left"><a href="#" class="flip-link" id="to-register">没有账户？</a></span>
+                    <span class="pull-right"><input style="height: 20px;width: 60px" id="loginBtn" class="btn btn-inverse" value="登录"/></span>
+                </div>
+            </form>
+            <form id="registerform" class="form-vertical">
+				<p>注册账户</p>
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-user"></i></span><input id="regName" type="text" placeholder="姓名" />
+                        </div>
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-user"></i></span><input id="idNum" type="text" placeholder="身份证号码" />
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-lock"></i></span><input id="regPass" type="password" placeholder="密码" />
+                        </div>
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-lock"></i></span><input id="repPass" type="password" placeholder="重复密码" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <span class="pull-left"><a href="#" class="flip-link" id="to-login">&lt; 返回登录</a></span>
+                    <span class="pull-right"><input id="registerBtn" type="submit" class="btn btn-inverse" value="确认" /></span>
+                </div>
+            </form>
+        </div>
+
+        <script src="js/lib/jquery.min.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/login.js"></script>
+    </body>
+</html>
